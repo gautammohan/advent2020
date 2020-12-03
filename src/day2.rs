@@ -6,9 +6,9 @@ pub fn day2() {
 
     let s = fs::read_to_string("inputs/day2.txt").expect("file not found");
     let items : Vec<_> = s.lines().map(parse_line).collect();
-    println!("day 1 part 1: {}", get_all_valid_passwords(items));
+    println!("day 2 part 1: {}", get_all_valid_passwords(items));
     let items2 : Vec<_> = s.lines().map(parse_line2).collect();
-    println!("day 1 part 1: {}", get_all_valid_passwords(items2));
+    println!("day 2 part 2: {}", get_all_valid_passwords(items2));
 
 }
 
