@@ -1,3 +1,4 @@
+// Worked with Omar on this one
 use std::collections::{HashMap, HashSet};
 use std::fs;
 
@@ -26,7 +27,7 @@ pub fn day6() {
                 *m.entry(c).or_insert(0) += 1;
             });
         }
-        sum += m.keys().filter(|k| *m.get(k).unwrap() == count).count();
+        sum += m.values().filter(|v| **v == count).count();
     }
     println!("day 6 part 2: {}", sum);
 }
