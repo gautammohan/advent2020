@@ -9,7 +9,7 @@ pub fn day3() {
     let tree_prod = vec![(1, 1), (1, 3), (1, 5), (1, 7), (2, 1)]
         .iter()
         .fold(1, |acc, (v, h)| acc * solve(*v, *h, &rows));
-    println!("day 3, part 2: {}", tree_prod);
+    println!("day 3 part 2: {}", tree_prod);
 }
 
 fn solve(vstep: usize, hstep: usize, rows: &Vec<&str>) -> usize {
