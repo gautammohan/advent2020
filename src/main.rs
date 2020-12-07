@@ -18,11 +18,15 @@ use day5::day5;
 mod day6;
 use day6::day6;
 
+mod day7;
+use day7::day7;
+
 fn main() {
     day1();
     day2();
     day3();
     day4();
-     day5();
+    day5();
     day6();
+    day7();
 }
