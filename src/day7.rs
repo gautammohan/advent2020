@@ -1,4 +1,4 @@
-use std::collections::{HashMap, HashSet};
+use std::collections::{HashMap};
 use std::fs;
 
 // If I wasn't trying to speed through this at 1am I would have tried
@@ -79,7 +79,7 @@ pub fn day7() {
 
 #[cfg(test)]
 mod test {
-    static s: &str = "light red bags contain 1 bright white bag, 2 muted yellow bags.
+    static S: &str = "light red bags contain 1 bright white bag, 2 muted yellow bags.
 dark orange bags contain 3 bright white bags, 4 muted yellow bags.
 bright white bags contain 1 shiny gold bag.
 muted yellow bags contain 2 shiny gold bags, 9 faded blue bags.
@@ -104,7 +104,7 @@ dotted black bags contain no other bags.";
         let n = "faded blue bags contain no other bags.";
         let map2 = parse(n.to_string());
         assert_eq!(*map2.get("faded blue").unwrap().get("empty").unwrap(), 1);
-        let map3 = parse(s.to_string());
+        let map3 = parse(S.to_string());
         assert_eq!(
             *map3.get("shiny gold").unwrap().get("dark olive").unwrap(),
             1
@@ -112,7 +112,7 @@ dotted black bags contain no other bags.";
     }
     #[test]
     fn test_find() {
-        let map = parse(s.to_string());
+        let map = parse(S.to_string());
         let found : Vec<_> = map.keys().filter(|bag| find(bag, &map)).collect();
         assert_eq!(found.len()-1, 4);
     }

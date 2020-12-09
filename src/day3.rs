@@ -29,7 +29,7 @@ fn solve(vstep: usize, hstep: usize, rows: &Vec<&str>) -> usize {
 #[cfg(test)]
 mod tests {
     use super::solve;
-    static example: &str = "..##.......
+    static EXAMPLE: &str = "..##.......
 #...#...#..
 .#....#..#.
 ..#.#...#.#
@@ -42,36 +42,36 @@ mod tests {
 .#..#...#.#";
     #[test]
     fn test_r1_d1() {
-        let rows = example.lines().collect();
+        let rows = EXAMPLE.lines().collect();
         assert_eq!(2, solve(1, 1, &rows));
     }
 
     #[test]
     fn test_r3_d1() {
-        let rows = example.lines().collect();
+        let rows = EXAMPLE.lines().collect();
         assert_eq!(7, solve(1, 3, &rows));
     }
     #[test]
     fn test_r5_d1() {
-        let rows = example.lines().collect();
+        let rows = EXAMPLE.lines().collect();
         assert_eq!(3, solve(1, 5, &rows));
     }
 
     #[test]
     fn test_r7_d1() {
-        let rows: Vec<&str> = example.lines().collect();
+        let rows: Vec<&str> = EXAMPLE.lines().collect();
         assert_eq!(4, solve(1, 7, &rows));
     }
 
     #[test]
     fn test_r1_d2() {
-        let rows: Vec<&str> = example.lines().collect();
+        let rows: Vec<&str> = EXAMPLE.lines().collect();
         assert_eq!(2, solve(2, 1, &rows));
     }
 
     #[test]
     fn prod() {
-        let rows: Vec<&str> = example.lines().collect();
+        let rows: Vec<&str> = EXAMPLE.lines().collect();
         let tree_prod = vec![(1, 1), (1, 3), (1, 5), (1, 7), (2, 1)]
             .iter()
             .fold(1, |acc, (h, v)| acc * solve(*h, *v, &rows));

@@ -159,18 +159,18 @@ fn field_names<'a>(pp: &'a RawPassport) -> HashSet<&'a str> {
 #[cfg(test)]
 mod test {
     use super::*;
-    static hgt: PassportField = PassportField {
-        fname: "hgt",
-        fdata: "183cm",
-    };
-    static hcl: PassportField = PassportField {
-        fname: "hcl",
-        fdata: "#fffffd",
-    };
-    static iyr: PassportField = PassportField {
-        fname: "iyr",
-        fdata: "2013",
-    };
+    // static HGT: PassportField = PassportField {
+    //     fname: "hgt",
+    //     fdata: "183cm",
+    // };
+    // static HCL: PassportField = PassportField {
+    //     fname: "hcl",
+    //     fdata: "#fffffd",
+    // };
+    // static IYR: PassportField = PassportField {
+    //     fname: "iyr",
+    //     fdata: "2013",
+    // };
 
     #[test]
     fn test_passport_fields() {
