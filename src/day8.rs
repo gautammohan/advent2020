@@ -118,6 +118,6 @@ acc +6";
     #[test]
     fn example() {
         let prog = parse(S).unwrap();
-        assert_eq!(Err(InfiniteLoop(5)), run(prog))
+        assert_eq!(Err(InfiniteLoop(5)), run(&prog))
     }
 }
