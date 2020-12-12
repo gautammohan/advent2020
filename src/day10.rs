@@ -10,8 +10,8 @@ pub fn day10() {
     }
     adapters.sort();
     let (diff1, diff3) = part_1(&adapters);
-    println!("day 9 part 1: {}", diff1 * diff3);
-    println!("day 9 part 2: {}", part_2(&adapters));
+    println!("day 10 part 1: {}", diff1 * diff3);
+    println!("day 10 part 2: {}", part_2(&adapters));
 }
 
 fn part_1(adapters: &Vec<i32>) -> (i32, i32) {
